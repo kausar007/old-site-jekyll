@@ -18,3 +18,5 @@ github_username:  kausar007
 
 # Build settings
 markdown: kramdown
+permalink: /:year/:month/:day/:title/
+
