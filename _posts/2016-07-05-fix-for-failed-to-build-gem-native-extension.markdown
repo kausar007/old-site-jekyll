@@ -11,7 +11,7 @@ While installing a ruby gem (usually first one) if you get an error like
 Building native extensions. This could take a while...
 ERROR: Error installing jekyll:
        ERROR: Failed to build gem native extension.
-
+    
 /usr/bin/ruby extconf.rb
 mkmf.rb can't find header files for ruby at /usr/lib/ruby/ruby.h
 {% endhighlight %}
