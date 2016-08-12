@@ -20,3 +20,5 @@ github_username:  kausar007
 markdown: kramdown
 permalink: /:year/:month/:day/:title/
 
+# Don't build travis gem bundles dir
+exclude: [vendor]
