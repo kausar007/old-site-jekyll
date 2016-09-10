@@ -21,6 +21,8 @@ after_success:
   - git clone git@github.com:kausar007/kausarbangash.com-deploy.git deploy
   - cp -r _site/* deploy/
   - cd deploy
+  - git config user.name "Kausar Mehmood"
+  - git config user.email "kausar_doaba@yahoo.com"
   - git add .
   - git commit -m "Deploy by git commit $TRAVIS_COMMIT"
   - git push origin master
