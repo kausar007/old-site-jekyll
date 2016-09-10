@@ -22,5 +22,5 @@ after_success:
   - cp -r _site/* deploy/
   - cd deploy
   - git add .
-  - git commit -m "Deploy by git commit: $TRAVIS_COMMIT"
+  - git commit -m "Deploy by git commit $TRAVIS_COMMIT"
   - git push origin master
