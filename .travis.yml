@@ -1,6 +1,10 @@
 language: ruby
 rvm:
   - 2.1
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
+sudo: false # route your build to the container-based infrastructure for a faster build
 
 before_install:
   - export TZ=Europe/London
@@ -8,17 +12,15 @@ before_install:
 
 install: gem install jekyll html-proofer
 
-script: jekyll build && htmlproofer ./_site
-
-env:
-  global:
-  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
-
-sudo: false # route your build to the container-based infrastructure for a faster build
+script: jekyll build && htmlproofer _site
 
 after_success:
   - eval "$(ssh-agent -s)" #start the ssh agent
   - chmod 600 deploy_key # this key should have push access
   - ssh-add deploy_key
-  - git remote add deploy git@github.com:kausar007/kausarbangash.com-deploy.git
-  - git push deploy master
+  - git clone git@github.com:kausar007/kausarbangash.com-deploy.git deploy
+  - cp -r _site/* deploy/
+  - cd deploy
+  - git add .
+  - git commit -m 'Deploy by git commit: $TRAVIS_COMMIT'
+  - git push origin master
