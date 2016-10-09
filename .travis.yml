@@ -18,7 +18,7 @@ after_success:
   - eval "$(ssh-agent -s)" #start the ssh agent
   - chmod 600 deploy_key # this key should have push access
   - ssh-add deploy_key
-  - git clone git@github.com:kausar007/kausarbangash.com-deploy.git deploy
+  - git clone git@github.com:kausar007/kausar007.github.io.git deploy
   - cp -r _site/* deploy/
   - cd deploy
   - git config user.name "Kausar Mehmood"
