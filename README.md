@@ -1,6 +1,6 @@
-### This repo is archived
+## This repo is archived
 
-## Site replaced by [kausar.dev](https://github.com/kausar007/kausar.dev/)
+### Site replaced by [kausar.dev](https://github.com/kausar007/kausar.dev/)
 
 Jekyll source of my personal
 
