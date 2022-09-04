@@ -1,7 +1,8 @@
-## kausarbangash.com
-[![Build Status](https://travis-ci.org/kausar007/kausarbangash.com.svg?branch=master)](https://travis-ci.org/kausar007/kausarbangash.com)
+### This repo is archived
 
-Jekyll source of my personal [blog](https://kausarbangash.com).
+## Site replaced by [kausar.dev](https://github.com/kausar007/kausar.dev/)
+
+Jekyll source of my personal
 
 A push to this repository triggers [Travis CI](https://travis-ci.org/) build. Html content is rendered using [Jekyll](https://jekyllrb.com/).
 After the build, [html-proofer](https://github.com/gjtorikian/html-proofer) runs to validate the html content.
